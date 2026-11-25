@@ -24,3 +24,11 @@ en el roadmap de Vibe Coding de 28 días.
 5. Cada práctica va en su propia carpeta (practica-01, practica-02, etc.)
 
 ## 📁 Estructura del proyecto
+
+## 📚 Lecciones de refactorización 
+- Archivos de +50 líneas deben dividirse en módulos
+- La IA genera código muerto frecuentemente → revisar siempre
+- Refactorizar en pasos atómicos, no todo de una vez
+- Probar después de cada paso de refactor
+- Nunca hardcodear credenciales (usar variables de entorno)
+- Extraer magic numbers a constantes con nombres descriptivos

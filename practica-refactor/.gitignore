@@ -1,0 +1,13 @@
+# Dependencias de Node
+node_modules/
+
+# Logs de errores (Día 19)
+logs/
+*.log
+
+# Variables de entorno (NUNCA subir)
+.env
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
