@@ -108,9 +108,41 @@ function completarTarea(req, res) {
   }
 }
 
-// Exportar las 3 funciones
+/**
+ * obtenerTareaPorId - Devuelve una tarea por su ID
+ * GET /api/tareas/:id
+ */
+function obtenerTareaPorId(req, res) {
+  try {
+    const id = parseInt(req.params.id, 10);
+
+    if (isNaN(id)) {
+      return res.status(400).json({
+        error: 'El ID debe ser un número válido'
+      });
+    }
+
+    const tarea = tareas.find(t => t.id === id);
+
+    if (!tarea) {
+      return res.status(404).json({
+        error: `Tarea con ID ${id} no encontrada`
+      });
+    }
+
+    res.status(200).json(tarea);
+  } catch (error) {
+    console.error('❌ Error en obtenerTareaPorId:', error.message);
+    res.status(500).json({
+      error: 'Error interno del servidor'
+    });
+  }
+}
+
+// Exportar las funciones
 module.exports = {
   crearTarea,
   listarTareas,
-  completarTarea
+  completarTarea,
+  obtenerTareaPorId
 };

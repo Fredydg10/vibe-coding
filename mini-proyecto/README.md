@@ -9,6 +9,9 @@ API simple para gestionar tareas personales. MVP con 3 endpoints.
 
 ## Endpoints
 
+### GET /api/tareas/:id
+Obtener una tarea por su ID.
+
 ### POST /api/tareas
 Crear una nueva tarea.
 

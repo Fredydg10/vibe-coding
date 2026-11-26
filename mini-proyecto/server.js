@@ -1,6 +1,6 @@
 // server.js
 const express = require('express');
-const { crearTarea, listarTareas, completarTarea } = require('./src/controllers/tareas');
+const { crearTarea, listarTareas, completarTarea, obtenerTareaPorId } = require('./src/controllers/tareas');
 
 const app = express();
 
@@ -10,6 +10,7 @@ app.use(express.json());
 // Rutas
 app.post('/api/tareas', crearTarea);
 app.get('/api/tareas', listarTareas);
+app.get('/api/tareas/:id', obtenerTareaPorId);
 app.patch('/api/tareas/:id', completarTarea);
 
 // Ruta de prueba
@@ -17,12 +18,16 @@ app.get('/', (req, res) => {
   res.send('✅ API de Tareas funcionando. Prueba los endpoints en /api/tareas');
 });
 
-const PORT = process.env.PORT || 3000;
+if (require.main === module) {
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => {
+    console.log(`\n🚀 Servidor corriendo en http://localhost:${PORT}`);
+    console.log(`📝 Endpoints disponibles:`);
+    console.log(`   POST   /api/tareas       → Crear tarea`);
+    console.log(`   GET    /api/tareas       → Listar tareas`);
+    console.log(`   GET    /api/tareas/:id   → Obtener tarea`);
+    console.log(`   PATCH  /api/tareas/:id   → Completar tarea\n`);
+  });
+}
 
-app.listen(PORT, () => {
-  console.log(`\n🚀 Servidor corriendo en http://localhost:${PORT}`);
-  console.log(`📝 Endpoints disponibles:`);
-  console.log(`   POST   /api/tareas       → Crear tarea`);
-  console.log(`   GET    /api/tareas       → Listar tareas`);
-  console.log(`   PATCH  /api/tareas/:id   → Completar tarea\n`);
-});
+module.exports = app;
