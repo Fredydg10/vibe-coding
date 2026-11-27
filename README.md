@@ -6,7 +6,7 @@
 ![Roadmap](https://img.shields.io/badge/Roadmap-28%20Días-brightgreen)
 ![Status](https://img.shields.io/badge/Estado-Completado-success)
 ![Stack](https://img.shields.io/badge/Stack-Node.js%20%2B%20Express-blue)
-![Author](https://img.shields.io/badge/Author-Fredy-orange)
+![Autor](https://img.shields.io/badge/Author-Fredy-orange)
 
 ---
 
