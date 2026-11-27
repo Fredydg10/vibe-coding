@@ -148,8 +148,8 @@ metódico**. Cada commit cuenta una historia. Cada archivo de docs
 guarda una lección. Si vuelvo a leer esto en 6 meses, voy a recordar 
 exactamente por qué tomé cada decisión.
 
-**Autor:** Fredy  
-**Fecha de inicio:** 24/11/2026  
+**Autor:** Fredydg10  
+**Fecha de inicio:** 2/11/2026  
 **Fecha de cierre:** 28/11/2026  
 **Estado:** ✅ Roadmap completado
 
