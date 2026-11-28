@@ -1,3 +1,11 @@
+// Cargar variables de entorno
+require('dotenv').config();
+
+const PORT = process.env.PORT || 3000;
+const NODE_ENV = process.env.NODE_ENV || 'development';
+
+console.log(`🚀 Servidor en modo ${NODE_ENV}`);
+
 // server.js
 const express = require('express');
 const { crearTarea, listarTareas, completarTarea, obtenerTareaPorId } = require('./src/controllers/tareas');

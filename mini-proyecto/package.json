@@ -19,13 +19,14 @@
   },
   "homepage": "https://github.com/Fredydg10/vibe-coding#readme",
   "dependencies": {
+    "dotenv": "^18.0.10",
     "express": "^5.3.0"
   },
   "directories": {
     "doc": "docs"
   },
   "devDependencies": {
-    "jest": "^30.5.2",
+    "jest": "^29.7.0",
     "supertest": "^7.3.2"
   }
 }
